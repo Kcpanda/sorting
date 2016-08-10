@@ -1,0 +1,16 @@
+a=["bus","Marshel","hero"]
+def bubble_sort_by(a)
+  for i in 0...2 do
+    for j in 0...2 do
+      if (yield(a[j],a[j+1]) == 1)
+        x=a[j+1]
+        a[j+1]=a[j]
+        a[j]=x
+      end
+    end
+  end
+  puts "#{a}"
+end
+bubble_sort_by(a) do |left,right|
+  left.length <=> right.length
+end
