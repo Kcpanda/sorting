@@ -1,0 +1,14 @@
+array=[4,3,78,2,0,2]
+def sort(array)
+for i in 0...5
+  for j in 0...5
+    if(array[j]>array[j+1])
+      x=array[j+1]
+      array[j+1]=array[j]
+      array[j]=x
+    end
+  end
+end
+  puts "#{array}"
+end
+sort(array)
